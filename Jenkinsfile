@@ -38,7 +38,7 @@ pipeline {
          emailext body: 'Build confirmed',
                   subject: 'Build Confirm',
                   to: 'mblasse@hotmail.com',
-                  attatchLog: true
+                  attachLog: true
        }
      }
   }
