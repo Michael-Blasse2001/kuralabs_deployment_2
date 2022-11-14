@@ -33,5 +33,13 @@ pipeline {
          sh '/var/lib/jenkins/.local/bin/eb deploy  url-shortner-main-dev'
        }
      }
+     stage ('Email_Confirmation'){
+       steps{
+         emailext body: 'Build confirmed',
+                  subject: 'Build Confirm',
+                  to: 'mblasse@hotmail.com',
+                  attatchLog: true
+       }
+     }
   }
 }
